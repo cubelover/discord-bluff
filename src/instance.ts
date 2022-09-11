@@ -22,7 +22,9 @@ export default {
       } catch (err) {
         console.error(err);
       }
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise((resolve) => {
+        setTimeout(resolve, 1000);
+      });
     }
   },
   post: async <T>(
@@ -36,7 +38,9 @@ export default {
       } catch (err) {
         console.error(err);
       }
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise((resolve) => {
+        setTimeout(resolve, 1000);
+      });
     }
   },
 };

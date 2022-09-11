@@ -69,9 +69,14 @@ const bluffRound = (send: Send, guildId: string, channelId: string) => {
   const [uid, win] = bluff[1].find(([x]) => x !== config.id) ?? ['', 0];
   if (hasAI && bluff[1].some(([, y]) => y <= 0)) {
     const r = rating[uid] ?? 1500;
-    const d = 100 * (win > 0 ? 1 / (1 + 10 ** ((r - 3000) / 1500)) : -1 / (1 + 10 ** ((3000 - r) / 1500))) | 0;
+    const d =
+      (100 *
+        (win > 0 ? 1 / (1 + 10 ** ((r - 3000) / 1500)) : -1 / (1 + 10 ** ((3000 - r) / 1500)))) |
+      0;
     const r2 = r + d;
-    msg = `\n당신이 ${win > 0 ? '이겼' : '졌'}습니다. Rating ${r} -> ${r2} (${win > 0 ? `+${d}` : `-${-d}`})`;
+    msg = `\n당신이 ${win > 0 ? '이겼' : '졌'}습니다. Rating ${r} -> ${r2} (${
+      win > 0 ? `+${d}` : `-${-d}`
+    })`;
     rating[uid] = r2;
     console.log(rating);
   }

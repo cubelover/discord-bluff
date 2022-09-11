@@ -117,4 +117,4 @@ dist
 
 # config
 config.ts
-src/*.json
+src/rating.json

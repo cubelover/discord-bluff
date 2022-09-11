@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2016",
     "module": "commonjs",
     "outDir": "./dist",
     "rootDir": "./src",
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "src/*": ["src/*", "dist/*"],
+      "src/*": ["src/*", "dist/*"]
     },
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-  },
+    "resolveJsonModule": true
+  }
 }
